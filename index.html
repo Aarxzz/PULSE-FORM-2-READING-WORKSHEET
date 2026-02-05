@@ -14,7 +14,7 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
-        /* PRINT ENGINEERING RULES */
+        /* PRINT ENGINEERING RULES - OPTIMIZED TO REMOVE BLANKS */
         @media print {
             body { 
                 background-image: none !important; 
@@ -23,33 +23,39 @@
             }
             .no-print { display: none !important; }
             
-            /* Prevent headings from being orphaned at the bottom of a page */
+            /* Allow sections to break so we don't get massive white gaps */
+            section { 
+                page-break-inside: auto !important; 
+                break-inside: auto !important;
+            }
+
+            /* Prevent headings from being orphaned */
             h2, h3 { 
                 page-break-after: avoid; 
                 break-after: avoid;
             }
 
-            /* Ensure logical blocks do not split across pages */
-            section, 
+            /* Only keep individual small components intact */
             .swiss-border, 
             .grid > div, 
             tr, 
             .mcq-option,
             .poster-callout,
-            .bg-gray-100 {
-                page-break-inside: avoid;
-                break-inside: avoid;
+            .bg-gray-100,
+            .reflection-block {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
             }
 
-            /* Force clean breaks for major structural shifts if needed */
-            .page-break { 
-                page-break-before: always; 
-                break-before: page;
+            /* Ensure major containers can split if they contain multiple grids */
+            .grid {
+                page-break-inside: auto !important;
+                break-inside: auto !important;
             }
 
             /* Standardize margins for PDF export */
             @page {
-                margin: 2cm;
+                margin: 1.5cm;
             }
         }
 
@@ -112,7 +118,7 @@
             <div>
                 <span class="bg-black text-white px-3 py-1 text-xs font-black uppercase tracking-widest mb-4 inline-block italic">Unit 09: Take Care</span>
                 <h1 class="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter">
-                    Pulse <span class="red-accent">Reading</span><br>Exercise
+                    Pulse <span class="red-accent">Digital</span><br>Literacy
                 </h1>
             </div>
             <div class="w-full md:w-1/3 space-y-2 border-l-4 border-red-600 pl-4">
@@ -270,7 +276,7 @@
             <p class="text-xs font-bold uppercase text-gray-500 italic">Instruction: Choose the best answer by marking the corresponding box.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="space-y-4">
+                <div class="space-y-4 mcq-block">
                     <p class="font-bold text-sm uppercase tracking-tight">Q1. Why is cyberbullying described as following a victim home?</p>
                     <div class="grid gap-2 text-xs">
                         <label class="mcq-option flex items-center"><input type="radio" name="q1"> A. Because bullies walk to the victim's house.</label>
@@ -279,7 +285,7 @@
                         <label class="mcq-option flex items-center"><input type="radio" name="q1"> D. Because social media is only available at home.</label>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 mcq-block">
                     <p class="font-bold text-sm uppercase tracking-tight">Q2. What is the most important rule mentioned in the text?</p>
                     <div class="grid gap-2 text-xs">
                         <label class="mcq-option flex items-center"><input type="radio" name="q2"> A. To harass the bully back.</label>
@@ -288,7 +294,7 @@
                         <label class="mcq-option flex items-center"><input type="radio" name="q2"> D. To only use chat rooms at school.</label>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 mcq-block">
                     <p class="font-bold text-sm uppercase tracking-tight">Q3. According to the passage, screenshots are used as:</p>
                     <div class="grid gap-2 text-xs">
                         <label class="mcq-option flex items-center"><input type="radio" name="q3"> A. Proof.</label>
@@ -297,7 +303,7 @@
                         <label class="mcq-option flex items-center"><input type="radio" name="q3"> D. Filters.</label>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 mcq-block">
                     <p class="font-bold text-sm uppercase tracking-tight">Q4. How does cyberbullying make victims feel even at home?</p>
                     <div class="grid gap-2 text-xs">
                         <label class="mcq-option flex items-center"><input type="radio" name="q4"> A. Angry.</label>
@@ -354,9 +360,6 @@
             </div>
         </section>
 
-        <!-- PAGE BREAK -->
-        <div class="page-break pt-12"></div>
-
         <!-- NEW SECTION C: GAP-FILLING (WORD BANK) -->
         <section class="space-y-8">
             <div class="flex items-baseline gap-4">
@@ -364,7 +367,7 @@
                 <div class="flex-grow h-[2px] bg-red-600"></div>
             </div>
 
-            <div class="border-4 border-black p-6 flex flex-wrap gap-6 justify-center bg-gray-100">
+            <div class="border-4 border-black p-6 flex flex-wrap gap-6 justify-center bg-gray-100 swiss-border">
                 <span class="font-black border-r-2 border-red-600 pr-4">WORD BANK</span>
                 <span class="font-bold uppercase text-xs">Ignore</span>
                 <span class="font-bold uppercase text-xs">Proof</span>
@@ -374,7 +377,7 @@
                 <span class="font-bold uppercase text-xs">Secret</span>
             </div>
 
-            <div class="space-y-8 text-lg leading-loose p-8 border-2 border-gray-200 bg-white">
+            <div class="space-y-8 text-lg leading-loose p-8 border-2 border-gray-200 bg-white swiss-border">
                 <p>Dealing with a bully requires a strategy. If you become a (1) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">, the most vital rule is to never keep it a (2) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">. You should collect (3) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="..."> of the harassment to serve as (4) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">. By taking these files to the (5) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">, you can ensure the bully is stopped. Remember, sometimes the best first step is to simply (6) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="..."> the messages entirely.</p>
             </div>
         </section>
@@ -386,7 +389,7 @@
                 <div class="flex-grow h-[2px] bg-red-600"></div>
             </div>
 
-            <div class="grid grid-cols-2 gap-0 border-2 border-black">
+            <div class="grid grid-cols-2 gap-0 border-2 border-black swiss-border">
                 <div class="bg-black text-white p-4 font-black uppercase text-xs tracking-widest text-center border-r-2 border-white">Digital Terminology</div>
                 <div class="bg-black text-white p-4 font-black uppercase text-xs tracking-widest text-center">Contextual Definition</div>
                 
@@ -411,7 +414,7 @@
                     <span class="text-red-600 font-black">[ ]</span>
                 </div>
                 <div class="p-6 border-b border-black text-xs flex items-center">
-                    2. To intentionally not respond to a bully.
+                    3. A virtual space for real-time messaging.
                 </div>
 
                 <div class="p-6 border-r border-black font-bold uppercase text-sm flex items-center justify-between">
@@ -423,9 +426,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- PAGE BREAK -->
-        <div class="page-break pt-12"></div>
 
         <!-- NEW POSTER CALLOUT PANEL -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-12 py-12">
@@ -445,17 +445,17 @@
         <section class="bg-gray-100 p-8 swiss-border">
             <h3 class="text-xs font-black uppercase tracking-widest mb-6">Reflection Annotation Space</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="space-y-2">
+                <div class="space-y-2 reflection-block">
                     <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 01</p>
                     <p class="text-xs font-bold italic">"Why is evidence (proof) the most important tool for the police?"</p>
                     <textarea rows="2" class="text-xs"></textarea>
                 </div>
-                <div class="space-y-2">
+                <div class="space-y-2 reflection-block">
                     <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 02</p>
                     <p class="text-xs font-bold italic">"How would you act as a 'responsible bystander' in your group chats?"</p>
                     <textarea rows="2" class="text-xs"></textarea>
                 </div>
-                <div class="space-y-2">
+                <div class="space-y-2 reflection-block">
                     <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 03</p>
                     <p class="text-xs font-bold italic">"Identify one 'Digital Footprint' you leave daily."</p>
                     <textarea rows="2" class="text-xs"></textarea>
@@ -468,7 +468,7 @@
     <footer class="mt-20 border-t-4 border-black p-12 bg-black text-white">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-[10px] tracking-[0.3em] font-black uppercase">
-                End of Material // Hybrid Display Protocol v3.0 // A251
+                End of Material // Hybrid Display Protocol v3.1 // A251
             </div>
             <button onclick="window.print()" class="no-print border-2 border-white px-8 py-3 font-black uppercase text-sm hover:bg-white hover:text-black transition-all">
                 Export Poster (PDF)
