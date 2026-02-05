@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Safety Action Plan | Swiss Modernist Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        @media print {
+            body { background-image: none !important; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .content-box { border: 2pt solid #000 !important; }
+        }
+
+        .swiss-border { border: 2pt solid #000000; }
+        .red-accent { color: #FF0000; }
+        .bg-red-accent { background-color: #FF0000; }
+        .tracking-tighter { letter-spacing: -0.05em; }
+        
+        input, textarea {
+            background: transparent;
+            border-bottom: 1pt solid #000;
+            outline: none;
+            width: 100%;
+        }
+        
+        input:focus, textarea:focus {
+            border-bottom: 2pt solid #FF0000;
+        }
+
+        .glossary-term {
+            text-decoration: underline;
+            text-decoration-color: #FF0000;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+
+        .mcq-option input[type="radio"] {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #000;
+            border-radius: 0;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        .mcq-option input[type="radio"]:checked {
+            background-color: #FF0000;
+            border-color: #FF0000;
+        }
+        
+        .poster-callout {
+            border-left: 12px solid #FF0000;
+            padding-left: 20px;
+        }
+        .side-note {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="border-b-4 border-black p-8 md:p-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end gap-6">
+            <div>
+                <span class="bg-black text-white px-3 py-1 text-xs font-black uppercase tracking-widest mb-4 inline-block italic">Unit 09: Take Care</span>
+                <h1 class="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter">
+                    Pulse <span class="red-accent">Reading</span><br>Exercise
+                </h1>
+            </div>
+            <div class="w-full md:w-1/3 space-y-2 border-l-4 border-red-600 pl-4">
+                <div class="flex justify-between border-b border-black pb-1">
+                    <span class="text-[10px] font-bold uppercase">Subject</span>
+                    <input type="text" class="text-xs border-none p-0 text-right font-bold" value="FORM 2 ESL">
+                </div>
+                <div class="flex justify-between border-b border-black pb-1">
+                    <span class="text-[10px] font-bold uppercase">Date</span>
+                    <input type="text" class="text-xs border-none p-0 text-right font-bold" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="flex justify-between border-b border-black pb-1">
+                    <span class="text-[10px] font-bold uppercase">Agent</span>
+                    <input type="text" class="text-xs border-none p-0 text-right font-bold" placeholder="STUDENT NAME">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-8 md:p-12 space-y-16">
+
+        <!-- MODULE: READING PASSAGE -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+            <div class="hidden lg:block absolute -left-12 top-0 h-full">
+                <div class="side-note h-full flex justify-center items-center">SECTION 01 // CORE READING CONTENT</div>
+            </div>
+            <div class="lg:col-span-8 space-y-6">
+                <div class="flex items-baseline gap-4">
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">01. Reading Passage</h2>
+                    <div class="flex-grow h-[2px] bg-red-600"></div>
+                </div>
+                <div class="swiss-border p-8 text-lg leading-relaxed space-y-4 bg-white">
+                    <p>Cyberbullying is the use of digital communication to <span class="glossary-term">ignore</span>, harass, or threaten others. It often happens through social media, <span class="glossary-term">chat rooms</span>, or private messages. Unlike physical bullying, it can follow a <span class="glossary-term">victim</span> home, making them feel unsafe even in their own bedroom.</p>
+                    <p>The most important rule is to never keep it a secret. Finding <span class="glossary-term">proof</span> of the bullying, such as screenshots, is vital for the <span class="glossary-term">police</span> or school authorities to take action. You must remember that it is never your fault.</p>
+                    
+                    <div class="border-t-4 border-black pt-6 mt-6 space-y-4">
+                        <h3 class="font-black text-xs uppercase tracking-widest text-red-600">The Digital Ripple Effect</h3>
+                        <p class="text-base text-gray-800 italic">The emotional impact of these digital attacks can create a "ripple effect," damaging a student's confidence and mental health. However, digital responsibility starts with the bystander. If you see someone being targeted, reporting the behavior is a sign of strength, not weakness.</p>
+                        <p class="text-base text-gray-800">Every message sent leaves a permanent footprint. By choosing to act responsibly, we protect the digital environment for everyone. Remember: A single report can stop the cycle of harassment before it escalates.</p>
+                    </div>
+                </div>
+                <p class="text-[10px] uppercase font-bold text-gray-400 italic">Instruction: Answer all following sections using evidence from the text above.</p>
+            </div>
+            
+            <div class="lg:col-span-4 space-y-6">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">Glossary</h2>
+                <div class="bg-gray-100 border-l-8 border-red-600 p-6 space-y-4">
+                    <div>
+                        <p class="font-black text-xs uppercase text-red-600">Term 01</p>
+                        <p class="font-bold">Ignore</p>
+                        <p class="text-sm">To refuse to show a reaction or response to someone.</p>
+                    </div>
+                    <div>
+                        <p class="font-black text-xs uppercase text-red-600">Term 02</p>
+                        <p class="font-bold">Proof</p>
+                        <p class="text-sm">Evidence that can show a statement is true (e.g., screenshots).</p>
+                    </div>
+                </div>
+                
+                <div class="bg-black text-white p-6 swiss-border shadow-[8px_8px_0px_0px_rgba(255,0,0,1)]">
+                    <p class="text-2xl font-black uppercase tracking-tighter leading-none italic">"Digital responsibility starts with the bystander."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE: POSTER CALLOUT 1 -->
+        <div class="grid grid-cols-3 gap-4 no-print">
+            <div class="bg-red-600 text-white p-4 font-black text-center uppercase tracking-widest text-xs">STOP</div>
+            <div class="bg-black text-white p-4 font-black text-center uppercase tracking-widest text-xs">SAVE</div>
+            <div class="bg-red-600 text-white p-4 font-black text-center uppercase tracking-widest text-xs">REPORT</div>
+        </div>
+
+        <!-- MODULE: LOGIC EXERCISES -->
+        <section class="space-y-8">
+            <div class="flex items-baseline gap-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">02. Logic Exercises</h2>
+                <div class="flex-grow h-[2px] bg-red-600"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="swiss-border p-6 relative">
+                    <span class="absolute -top-4 -left-4 bg-black text-white w-8 h-8 flex items-center justify-center font-black">2</span>
+                    <p class="font-black uppercase text-sm mb-4">Communication Termination</p>
+                    <p class="text-sm mb-4">Identify <strong>two ways</strong> to stop a bully from communicating with you based on the scanning strategy.</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold">A.</span>
+                            <input type="text" placeholder="Method 01">
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="font-bold">B.</span>
+                            <input type="text" placeholder="Method 02">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiss-border p-6 relative">
+                    <span class="absolute -top-4 -left-4 bg-black text-white w-8 h-8 flex items-center justify-center font-black">3</span>
+                    <p class="font-black uppercase text-sm mb-4">Chat Room Protocols</p>
+                    <p class="text-sm mb-4">What is the <strong>best way</strong> to deal with bullying specifically in a chat room environment?</p>
+                    <textarea rows="2" placeholder="Analyze the strategy..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE: GRAMMAR FOCUS (CALLOUT) -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="border-[2pt] border-red-600 p-8 space-y-4 bg-white shadow-[8px_8px_0px_0px_rgba(255,0,0,1)]">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter italic">Grammar Focus</h3>
+                    <p class="text-xs uppercase font-bold text-gray-500">Modals of Advice</p>
+                    <p class="text-sm">Use <strong>SHOULD</strong> for suggestions and <strong>MUSTN'T</strong> for strong safety rules.</p>
+                    <div class="text-xs bg-gray-100 p-4 font-mono">
+                        You + [Modal] + [Action]<br>
+                        "You should report it."
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-8">
+                <div class="flex items-baseline gap-4">
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">03. Security Database</h2>
+                    <div class="flex-grow h-[2px] bg-red-600"></div>
+                </div>
+                
+                <div class="space-y-6">
+                    <p class="font-bold text-sm">Based on the Reading Passage, identify three trusted authorities to show your evidence to:</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center gap-4 swiss-border p-4">
+                            <div class="w-12 h-12 bg-red-600 flex items-center justify-center text-white font-black text-xl">01</div>
+                            <input type="text" class="border-none font-black uppercase tracking-widest text-sm" placeholder="AUTHORITY TYPE">
+                        </div>
+                        <div class="flex items-center gap-4 swiss-border p-4">
+                            <div class="w-12 h-12 bg-red-600 flex items-center justify-center text-white font-black text-xl">02</div>
+                            <input type="text" class="border-none font-black uppercase tracking-widest text-sm" placeholder="AUTHORITY TYPE">
+                        </div>
+                        <div class="flex items-center gap-4 swiss-border p-4">
+                            <div class="w-12 h-12 bg-red-600 flex items-center justify-center text-white font-black text-xl">03</div>
+                            <input type="text" class="border-none font-black uppercase tracking-widest text-sm" placeholder="AUTHORITY TYPE">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE BREAK -->
+        <div class="page-break pt-12"></div>
+
+        <!-- NEW SECTION A: OBJECTIVE QUESTIONS (MCQS) -->
+        <section class="space-y-8">
+            <div class="flex items-baseline gap-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">04. Objective Analysis</h2>
+                <div class="flex-grow h-[2px] bg-red-600"></div>
+            </div>
+            <p class="text-xs font-bold uppercase text-gray-500 italic">Instruction: Choose the best answer by marking the corresponding box.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-4">
+                    <p class="font-bold text-sm uppercase tracking-tight">Q1. Why is cyberbullying described as following a victim home?</p>
+                    <div class="grid gap-2 text-xs">
+                        <label class="mcq-option flex items-center"><input type="radio" name="q1"> A. Because bullies walk to the victim's house.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q1"> B. Because it happens through digital devices used at home.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q1"> C. Because victims must stay in their bedrooms.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q1"> D. Because social media is only available at home.</label>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm uppercase tracking-tight">Q2. What is the most important rule mentioned in the text?</p>
+                    <div class="grid gap-2 text-xs">
+                        <label class="mcq-option flex items-center"><input type="radio" name="q2"> A. To harass the bully back.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q2"> B. To delete all social media accounts.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q2"> C. To never keep the bullying a secret.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q2"> D. To only use chat rooms at school.</label>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm uppercase tracking-tight">Q3. According to the passage, screenshots are used as:</p>
+                    <div class="grid gap-2 text-xs">
+                        <label class="mcq-option flex items-center"><input type="radio" name="q3"> A. Proof.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q3"> B. Vocabulary.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q3"> C. Secrets.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q3"> D. Filters.</label>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm uppercase tracking-tight">Q4. How does cyberbullying make victims feel even at home?</p>
+                    <div class="grid gap-2 text-xs">
+                        <label class="mcq-option flex items-center"><input type="radio" name="q4"> A. Angry.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q4"> B. Unsafe.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q4"> C. Responsible.</label>
+                        <label class="mcq-option flex items-center"><input type="radio" name="q4"> D. Bored.</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION B: TRUE / FALSE STATEMENTS -->
+        <section class="space-y-8">
+            <div class="flex items-baseline gap-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">05. Fact Verification</h2>
+                <div class="flex-grow h-[2px] bg-red-600"></div>
+            </div>
+            
+            <div class="swiss-border p-8 bg-gray-50">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b-2 border-black">
+                            <th class="text-left pb-4 uppercase tracking-widest font-black">Statement</th>
+                            <th class="text-center pb-4 uppercase tracking-widest font-black w-32">Verdict</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-300">
+                        <tr>
+                            <td class="py-4">Cyberbullying only happens during school hours.</td>
+                            <td class="py-4 text-center font-bold">
+                                <span class="cursor-pointer hover:text-red-600">T</span> / <span class="cursor-pointer hover:text-red-600">F</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">Victims are responsible for the bullying they receive.</td>
+                            <td class="py-4 text-center font-bold">
+                                <span class="cursor-pointer hover:text-red-600">T</span> / <span class="cursor-pointer hover:text-red-600">F</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">The police can take action if there is evidence.</td>
+                            <td class="py-4 text-center font-bold">
+                                <span class="cursor-pointer hover:text-red-600">T</span> / <span class="cursor-pointer hover:text-red-600">F</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">Ignoring a bully is a method of communication termination.</td>
+                            <td class="py-4 text-center font-bold">
+                                <span class="cursor-pointer hover:text-red-600">T</span> / <span class="cursor-pointer hover:text-red-600">F</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PAGE BREAK -->
+        <div class="page-break pt-12"></div>
+
+        <!-- NEW SECTION C: GAP-FILLING (WORD BANK) -->
+        <section class="space-y-8">
+            <div class="flex items-baseline gap-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">06. Contextual Fill</h2>
+                <div class="flex-grow h-[2px] bg-red-600"></div>
+            </div>
+
+            <div class="border-4 border-black p-6 flex flex-wrap gap-6 justify-center bg-gray-100">
+                <span class="font-black border-r-2 border-red-600 pr-4">WORD BANK</span>
+                <span class="font-bold uppercase text-xs">Ignore</span>
+                <span class="font-bold uppercase text-xs">Proof</span>
+                <span class="font-bold uppercase text-xs">Victim</span>
+                <span class="font-bold uppercase text-xs">Authorities</span>
+                <span class="font-bold uppercase text-xs">Screenshots</span>
+                <span class="font-bold uppercase text-xs">Secret</span>
+            </div>
+
+            <div class="space-y-8 text-lg leading-loose p-8 border-2 border-gray-200 bg-white">
+                <p>Dealing with a bully requires a strategy. If you become a (1) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">, the most vital rule is to never keep it a (2) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">. You should collect (3) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="..."> of the harassment to serve as (4) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">. By taking these files to the (5) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="...">, you can ensure the bully is stopped. Remember, sometimes the best first step is to simply (6) <input type="text" class="w-48 mx-2 text-center border-b-2 border-black font-bold uppercase text-sm" placeholder="..."> the messages entirely.</p>
+            </div>
+        </section>
+
+        <!-- NEW SECTION D: MATCHING EXERCISE -->
+        <section class="space-y-8">
+            <div class="flex items-baseline gap-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">07. Schematic Matching</h2>
+                <div class="flex-grow h-[2px] bg-red-600"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-0 border-2 border-black">
+                <div class="bg-black text-white p-4 font-black uppercase text-xs tracking-widest text-center border-r-2 border-white">Digital Terminology</div>
+                <div class="bg-black text-white p-4 font-black uppercase text-xs tracking-widest text-center">Contextual Definition</div>
+                
+                <div class="p-6 border-b border-r border-black font-bold uppercase text-sm flex items-center justify-between">
+                    <span>A. Chat Room</span>
+                    <span class="text-red-600 font-black">[ ]</span>
+                </div>
+                <div class="p-6 border-b border-black text-xs flex items-center">
+                    1. A person targeted by harmful actions.
+                </div>
+
+                <div class="p-6 border-b border-r border-black font-bold uppercase text-sm flex items-center justify-between">
+                    <span>B. Victim</span>
+                    <span class="text-red-600 font-black">[ ]</span>
+                </div>
+                <div class="p-6 border-b border-black text-xs flex items-center">
+                    2. To intentionally not respond to a bully.
+                </div>
+
+                <div class="p-6 border-b border-r border-black font-bold uppercase text-sm flex items-center justify-between">
+                    <span>C. Ignore</span>
+                    <span class="text-red-600 font-black">[ ]</span>
+                </div>
+                <div class="p-6 border-b border-black text-xs flex items-center">
+                    2. To intentionally not respond to a bully.
+                </div>
+
+                <div class="p-6 border-r border-black font-bold uppercase text-sm flex items-center justify-between">
+                    <span>D. Proof</span>
+                    <span class="text-red-600 font-black">[ ]</span>
+                </div>
+                <div class="p-6 text-xs flex items-center">
+                    4. Captured evidence showing online harassment.
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE BREAK -->
+        <div class="page-break pt-12"></div>
+
+        <!-- NEW POSTER CALLOUT PANEL -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 py-12">
+            <div class="poster-callout bg-white swiss-border p-10 flex flex-col justify-center gap-6">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h2 class="text-5xl font-black uppercase tracking-tighter leading-none">You are not at fault.</h2>
+                <p class="text-sm font-bold uppercase text-gray-400">Security Memo: No one deserves to be targeted. The responsibility lies with the aggressor.</p>
+            </div>
+            <div class="swiss-border p-10 bg-black text-white flex flex-col justify-center gap-6">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <h2 class="text-5xl font-black uppercase tracking-tighter leading-none italic">Report the Behavior.</h2>
+                <p class="text-sm font-bold uppercase text-red-500 tracking-widest">Act now // Protect the cycle</p>
+            </div>
+        </section>
+
+        <!-- REFLECTION MARGIN PROMPTS -->
+        <section class="bg-gray-100 p-8 swiss-border">
+            <h3 class="text-xs font-black uppercase tracking-widest mb-6">Reflection Annotation Space</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-2">
+                    <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 01</p>
+                    <p class="text-xs font-bold italic">"Why is evidence (proof) the most important tool for the police?"</p>
+                    <textarea rows="2" class="text-xs"></textarea>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 02</p>
+                    <p class="text-xs font-bold italic">"How would you act as a 'responsible bystander' in your group chats?"</p>
+                    <textarea rows="2" class="text-xs"></textarea>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-[10px] font-black uppercase text-red-600 italic">Prompt 03</p>
+                    <p class="text-xs font-bold italic">"Identify one 'Digital Footprint' you leave daily."</p>
+                    <textarea rows="2" class="text-xs"></textarea>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 border-t-4 border-black p-12 bg-black text-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-[10px] tracking-[0.3em] font-black uppercase">
+                End of Material // Hybrid Display Protocol v3.0 // A251
+            </div>
+            <button onclick="window.print()" class="no-print border-2 border-white px-8 py-3 font-black uppercase text-sm hover:bg-white hover:text-black transition-all">
+                Export Poster (PDF)
+            </button>
+        </div>
+    </footer>
+
+</body>
+</html>
