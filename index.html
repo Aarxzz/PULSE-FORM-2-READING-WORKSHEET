@@ -14,11 +14,43 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
+        /* PRINT ENGINEERING RULES */
         @media print {
-            body { background-image: none !important; }
+            body { 
+                background-image: none !important; 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+            }
             .no-print { display: none !important; }
-            .page-break { page-break-before: always; }
-            .content-box { border: 2pt solid #000 !important; }
+            
+            /* Prevent headings from being orphaned at the bottom of a page */
+            h2, h3 { 
+                page-break-after: avoid; 
+                break-after: avoid;
+            }
+
+            /* Ensure logical blocks do not split across pages */
+            section, 
+            .swiss-border, 
+            .grid > div, 
+            tr, 
+            .mcq-option,
+            .poster-callout,
+            .bg-gray-100 {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Force clean breaks for major structural shifts if needed */
+            .page-break { 
+                page-break-before: always; 
+                break-before: page;
+            }
+
+            /* Standardize margins for PDF export */
+            @page {
+                margin: 2cm;
+            }
         }
 
         .swiss-border { border: 2pt solid #000000; }
